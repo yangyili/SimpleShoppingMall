@@ -19,6 +19,7 @@
 		BEAA6FB6242B8D5E00211793 /* SimpleShoppingMallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FB5242B8D5E00211793 /* SimpleShoppingMallTests.m */; };
 		BEAA6FC1242B8D5E00211793 /* SimpleShoppingMallUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FC0242B8D5E00211793 /* SimpleShoppingMallUITests.m */; };
 		BEAA6FD0242B96FC00211793 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FCF242B96FC00211793 /* MovieViewController.m */; };
+		BEAA6FD5242B9B7300211793 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FD4242B9B7200211793 /* HttpClient.m */; };
 		EAF8BA26BA68EF789D0623A7 /* Pods_SimpleShoppingMall_SimpleShoppingMallUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49DCCA4CC9CB10628874182 /* Pods_SimpleShoppingMall_SimpleShoppingMallUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,9 @@
 		BEAA6FC2242B8D5E00211793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEAA6FCE242B96FC00211793 /* MovieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
 		BEAA6FCF242B96FC00211793 /* MovieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
+		BEAA6FD3242B9B7200211793 /* HttpClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
+		BEAA6FD4242B9B7200211793 /* HttpClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
+		BEAA6FD6242B9C5800211793 /* HttpClientProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpClientProtocol.h; sourceTree = "<group>"; };
 		F49DCCA4CC9CB10628874182 /* Pods_SimpleShoppingMall_SimpleShoppingMallUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleShoppingMall_SimpleShoppingMallUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -147,6 +151,7 @@
 		BEAA6F95242B8D5B00211793 /* SimpleShoppingMall */ = {
 			isa = PBXGroup;
 			children = (
+				BEAA6FD2242B9B4300211793 /* Network */,
 				BEAA6FD1242B99D500211793 /* Movie */,
 				BEAA6F96242B8D5B00211793 /* AppDelegate.h */,
 				BEAA6F97242B8D5B00211793 /* AppDelegate.m */,
@@ -188,6 +193,16 @@
 				BEAA6FCF242B96FC00211793 /* MovieViewController.m */,
 			);
 			path = Movie;
+			sourceTree = "<group>";
+		};
+		BEAA6FD2242B9B4300211793 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BEAA6FD6242B9C5800211793 /* HttpClientProtocol.h */,
+				BEAA6FD3242B9B7200211793 /* HttpClient.h */,
+				BEAA6FD4242B9B7200211793 /* HttpClient.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEAA6FD5242B9B7300211793 /* HttpClient.m in Sources */,
 				BEAA6FAC242B8D5E00211793 /* main.m in Sources */,
 				BEAA6FA1242B8D5B00211793 /* SecondViewController.m in Sources */,
 				BEAA6F98242B8D5B00211793 /* AppDelegate.m in Sources */,
