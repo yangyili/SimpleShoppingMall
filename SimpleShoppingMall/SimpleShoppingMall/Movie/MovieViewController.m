@@ -7,8 +7,12 @@
 //
 
 #import "MovieViewController.h"
+#import "MovieViewModel.h"
+#import "HttpClient.h"
 
-@interface MovieViewController ()
+@interface MovieViewController () <MovieViewControllerProtocol>
+
+@property(nonatomic, strong) MovieViewModel *viewModel;
 
 @end
 
@@ -17,6 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    HttpClient *client = [[HttpClient alloc] init];
+    self.viewModel = [[MovieViewModel alloc] initWithHttpClient:client viewController:self];
+    [self.viewModel fetchTop250];
 }
 
 #pragma -

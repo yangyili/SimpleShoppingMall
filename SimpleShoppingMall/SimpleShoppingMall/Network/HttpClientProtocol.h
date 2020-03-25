@@ -11,9 +11,9 @@
 
 @protocol HttpClientProtocol <NSObject>
 
-- (NSURL *_Nonnull) host;
++ (NSURL *_Nonnull) host;
 
-- (void)getDataWithPath:(NSString * _Nonnull)path parameters:(id _Nonnull)parameters success:(void (^ _Nullable)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^ _Nullable)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure;
+- (void)getDataWithPath:(NSString * _Nonnull)path parameters:(id _Nullable)parameters success:(void (^ _Nullable)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^ _Nullable)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure;
 
 @end
 

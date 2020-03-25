@@ -17,15 +17,15 @@
 
 -(instancetype)init{
     self = [super init];
-    self.sessionManger = [[AFHTTPSessionManager alloc] init];
+    self.sessionManger = [[AFHTTPSessionManager alloc] initWithBaseURL:[HttpClient host]];
     return self;
 }
 
-- (NSURL * _Nonnull)host {
++ (NSURL * _Nonnull)host {
     return [NSURL URLWithString:@"https://douban.uieee.com/"];
 }
 
-- (void)getDataWithPath:(NSString * _Nonnull)path parameters:(id _Nonnull)parameters success:(void (^ _Nullable)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^ _Nullable)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure {
+- (void)getDataWithPath:(NSString * _Nonnull)path parameters:(id _Nullable)parameters success:(void (^ _Nullable)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^ _Nullable)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure {
     
     [self.sessionManger GET:path parameters:parameters progress:nil success:success failure:failure];
 }
