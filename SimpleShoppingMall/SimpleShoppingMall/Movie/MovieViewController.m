@@ -1,18 +1,18 @@
 //
-//  DemoViewController.m
+//  MovieViewController.m
 //  SimpleShoppingMall
 //
 //  Created by Yang Dev Luo on 2020/3/25.
 //  Copyright © 2020 Thoughtworks. All rights reserved.
 //
 
-#import "DemoViewController.h"
+#import "MovieViewController.h"
 
-@interface DemoViewController ()
+@interface MovieViewController ()
 
 @end
 
-@implementation DemoViewController
+@implementation MovieViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

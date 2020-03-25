@@ -1,5 +1,5 @@
 //
-//  DemoViewController.h
+//  MovieViewController.h
 //  SimpleShoppingMall
 //
 //  Created by Yang Dev Luo on 2020/3/25.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DemoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface MovieViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end
 

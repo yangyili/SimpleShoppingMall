@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,7 +18,7 @@
 		BEAA6FAC242B8D5E00211793 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FAB242B8D5E00211793 /* main.m */; };
 		BEAA6FB6242B8D5E00211793 /* SimpleShoppingMallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FB5242B8D5E00211793 /* SimpleShoppingMallTests.m */; };
 		BEAA6FC1242B8D5E00211793 /* SimpleShoppingMallUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FC0242B8D5E00211793 /* SimpleShoppingMallUITests.m */; };
-		BEAA6FD0242B96FC00211793 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FCF242B96FC00211793 /* DemoViewController.m */; };
+		BEAA6FD0242B96FC00211793 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FCF242B96FC00211793 /* MovieViewController.m */; };
 		EAF8BA26BA68EF789D0623A7 /* Pods_SimpleShoppingMall_SimpleShoppingMallUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49DCCA4CC9CB10628874182 /* Pods_SimpleShoppingMall_SimpleShoppingMallUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,8 +66,8 @@
 		BEAA6FBC242B8D5E00211793 /* SimpleShoppingMallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleShoppingMallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAA6FC0242B8D5E00211793 /* SimpleShoppingMallUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleShoppingMallUITests.m; sourceTree = "<group>"; };
 		BEAA6FC2242B8D5E00211793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEAA6FCE242B96FC00211793 /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
-		BEAA6FCF242B96FC00211793 /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		BEAA6FCE242B96FC00211793 /* MovieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
+		BEAA6FCF242B96FC00211793 /* MovieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
 		F49DCCA4CC9CB10628874182 /* Pods_SimpleShoppingMall_SimpleShoppingMallUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleShoppingMall_SimpleShoppingMallUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -119,7 +119,6 @@
 				86F973FB80E24240CC836090 /* Pods-SimpleShoppingMallTests.debug.xcconfig */,
 				79431C45FB15DA6ECD3596C4 /* Pods-SimpleShoppingMallTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -148,6 +147,7 @@
 		BEAA6F95242B8D5B00211793 /* SimpleShoppingMall */ = {
 			isa = PBXGroup;
 			children = (
+				BEAA6FD1242B99D500211793 /* Movie */,
 				BEAA6F96242B8D5B00211793 /* AppDelegate.h */,
 				BEAA6F97242B8D5B00211793 /* AppDelegate.m */,
 				BEAA6F9C242B8D5B00211793 /* FirstViewController.h */,
@@ -159,8 +159,6 @@
 				BEAA6FA7242B8D5E00211793 /* LaunchScreen.storyboard */,
 				BEAA6FAA242B8D5E00211793 /* Info.plist */,
 				BEAA6FAB242B8D5E00211793 /* main.m */,
-				BEAA6FCE242B96FC00211793 /* DemoViewController.h */,
-				BEAA6FCF242B96FC00211793 /* DemoViewController.m */,
 			);
 			path = SimpleShoppingMall;
 			sourceTree = "<group>";
@@ -181,6 +179,15 @@
 				BEAA6FC2242B8D5E00211793 /* Info.plist */,
 			);
 			path = SimpleShoppingMallUITests;
+			sourceTree = "<group>";
+		};
+		BEAA6FD1242B99D500211793 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				BEAA6FCE242B96FC00211793 /* MovieViewController.h */,
+				BEAA6FCF242B96FC00211793 /* MovieViewController.m */,
+			);
+			path = Movie;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,7 +449,7 @@
 				BEAA6FAC242B8D5E00211793 /* main.m in Sources */,
 				BEAA6FA1242B8D5B00211793 /* SecondViewController.m in Sources */,
 				BEAA6F98242B8D5B00211793 /* AppDelegate.m in Sources */,
-				BEAA6FD0242B96FC00211793 /* DemoViewController.m in Sources */,
+				BEAA6FD0242B96FC00211793 /* MovieViewController.m in Sources */,
 				BEAA6F9E242B8D5B00211793 /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

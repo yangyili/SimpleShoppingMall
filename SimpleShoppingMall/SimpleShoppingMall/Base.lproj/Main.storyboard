@@ -45,7 +45,7 @@
         <!--Item-->
         <scene sceneID="nAi-jg-6cL">
             <objects>
-                <viewController id="JYN-No-PDf" customClass="DemoViewController" sceneMemberID="viewController">
+                <viewController id="JYN-No-PDf" customClass="MovieViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VoV-P7-7Vo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
