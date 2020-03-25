@@ -23,6 +23,8 @@
 		BEAA6FD9242BA31D00211793 /* MovieViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FD8242BA31D00211793 /* MovieViewModel.m */; };
 		BEAA6FDC242BACBA00211793 /* MovieList.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FDB242BACBA00211793 /* MovieList.m */; };
 		BEAA6FDF242BAE1800211793 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FDE242BAE1800211793 /* Movie.m */; };
+		BEAA6FE7242BB6D300211793 /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FE5242BB6D300211793 /* MovieTableViewCell.m */; };
+		BEAA6FE8242BB6D300211793 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEAA6FE6242BB6D300211793 /* MovieTableViewCell.xib */; };
 		EAF8BA26BA68EF789D0623A7 /* Pods_SimpleShoppingMall_SimpleShoppingMallUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49DCCA4CC9CB10628874182 /* Pods_SimpleShoppingMall_SimpleShoppingMallUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +83,9 @@
 		BEAA6FDB242BACBA00211793 /* MovieList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieList.m; sourceTree = "<group>"; };
 		BEAA6FDD242BAE1800211793 /* Movie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
 		BEAA6FDE242BAE1800211793 /* Movie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		BEAA6FE4242BB6D300211793 /* MovieTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieTableViewCell.h; sourceTree = "<group>"; };
+		BEAA6FE5242BB6D300211793 /* MovieTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
+		BEAA6FE6242BB6D300211793 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		F49DCCA4CC9CB10628874182 /* Pods_SimpleShoppingMall_SimpleShoppingMallUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleShoppingMall_SimpleShoppingMallUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -198,6 +203,7 @@
 		BEAA6FD1242B99D500211793 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				BEAA6FE0242BB68B00211793 /* View */,
 				BEAA6FCE242B96FC00211793 /* MovieViewController.h */,
 				BEAA6FCF242B96FC00211793 /* MovieViewController.m */,
 				BEAA6FD7242BA31D00211793 /* MovieViewModel.h */,
@@ -218,6 +224,16 @@
 				BEAA6FD4242B9B7200211793 /* HttpClient.m */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		BEAA6FE0242BB68B00211793 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BEAA6FE4242BB6D300211793 /* MovieTableViewCell.h */,
+				BEAA6FE5242BB6D300211793 /* MovieTableViewCell.m */,
+				BEAA6FE6242BB6D300211793 /* MovieTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +347,7 @@
 			files = (
 				BEAA6FA9242B8D5E00211793 /* LaunchScreen.storyboard in Resources */,
 				BEAA6FA6242B8D5E00211793 /* Assets.xcassets in Resources */,
+				BEAA6FE8242BB6D300211793 /* MovieTableViewCell.xib in Resources */,
 				BEAA6FA4242B8D5B00211793 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +501,7 @@
 				BEAA6F98242B8D5B00211793 /* AppDelegate.m in Sources */,
 				BEAA6FDF242BAE1800211793 /* Movie.m in Sources */,
 				BEAA6FD0242B96FC00211793 /* MovieViewController.m in Sources */,
+				BEAA6FE7242BB6D300211793 /* MovieTableViewCell.m in Sources */,
 				BEAA6F9E242B8D5B00211793 /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

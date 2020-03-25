@@ -9,6 +9,7 @@
 #import "MovieViewController.h"
 #import "MovieViewModel.h"
 #import "HttpClient.h"
+#import "MovieTableViewCell.h"
 
 @interface MovieViewController () <UITableViewDelegate, UITableViewDataSource, MovieViewControllerProtocol>
 
@@ -21,6 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"MovieTableViewCell" bundle:nil] forCellReuseIdentifier:@"MovieTableViewCell"];
+    
     // Do any additional setup after loading the view.
     HttpClient *client = [[HttpClient alloc] init];
     self.viewModel = [[MovieViewModel alloc] initWithHttpClient:client viewController:self];
@@ -35,11 +39,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    MovieTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"MovieTableViewCell"];
     Movie *movie = [self.viewModel movieAtIndex:indexPath.row];
     
     if (movie != nil) {
-        cell.textLabel.text = movie.title;
+        [cell configWithMovie:movie];
     }
     
     return cell;
