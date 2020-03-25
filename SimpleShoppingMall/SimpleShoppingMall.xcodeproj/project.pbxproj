@@ -20,6 +20,9 @@
 		BEAA6FC1242B8D5E00211793 /* SimpleShoppingMallUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FC0242B8D5E00211793 /* SimpleShoppingMallUITests.m */; };
 		BEAA6FD0242B96FC00211793 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FCF242B96FC00211793 /* MovieViewController.m */; };
 		BEAA6FD5242B9B7300211793 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FD4242B9B7200211793 /* HttpClient.m */; };
+		BEAA6FD9242BA31D00211793 /* MovieViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FD8242BA31D00211793 /* MovieViewModel.m */; };
+		BEAA6FDC242BACBA00211793 /* MovieList.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FDB242BACBA00211793 /* MovieList.m */; };
+		BEAA6FDF242BAE1800211793 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FDE242BAE1800211793 /* Movie.m */; };
 		EAF8BA26BA68EF789D0623A7 /* Pods_SimpleShoppingMall_SimpleShoppingMallUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49DCCA4CC9CB10628874182 /* Pods_SimpleShoppingMall_SimpleShoppingMallUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +75,12 @@
 		BEAA6FD3242B9B7200211793 /* HttpClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
 		BEAA6FD4242B9B7200211793 /* HttpClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
 		BEAA6FD6242B9C5800211793 /* HttpClientProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpClientProtocol.h; sourceTree = "<group>"; };
+		BEAA6FD7242BA31D00211793 /* MovieViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieViewModel.h; sourceTree = "<group>"; };
+		BEAA6FD8242BA31D00211793 /* MovieViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieViewModel.m; sourceTree = "<group>"; };
+		BEAA6FDA242BACBA00211793 /* MovieList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieList.h; sourceTree = "<group>"; };
+		BEAA6FDB242BACBA00211793 /* MovieList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieList.m; sourceTree = "<group>"; };
+		BEAA6FDD242BAE1800211793 /* Movie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		BEAA6FDE242BAE1800211793 /* Movie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
 		F49DCCA4CC9CB10628874182 /* Pods_SimpleShoppingMall_SimpleShoppingMallUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleShoppingMall_SimpleShoppingMallUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -191,6 +200,12 @@
 			children = (
 				BEAA6FCE242B96FC00211793 /* MovieViewController.h */,
 				BEAA6FCF242B96FC00211793 /* MovieViewController.m */,
+				BEAA6FD7242BA31D00211793 /* MovieViewModel.h */,
+				BEAA6FD8242BA31D00211793 /* MovieViewModel.m */,
+				BEAA6FDA242BACBA00211793 /* MovieList.h */,
+				BEAA6FDB242BACBA00211793 /* MovieList.m */,
+				BEAA6FDD242BAE1800211793 /* Movie.h */,
+				BEAA6FDE242BAE1800211793 /* Movie.m */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -463,8 +478,11 @@
 			files = (
 				BEAA6FD5242B9B7300211793 /* HttpClient.m in Sources */,
 				BEAA6FAC242B8D5E00211793 /* main.m in Sources */,
+				BEAA6FDC242BACBA00211793 /* MovieList.m in Sources */,
 				BEAA6FA1242B8D5B00211793 /* SecondViewController.m in Sources */,
+				BEAA6FD9242BA31D00211793 /* MovieViewModel.m in Sources */,
 				BEAA6F98242B8D5B00211793 /* AppDelegate.m in Sources */,
+				BEAA6FDF242BAE1800211793 /* Movie.m in Sources */,
 				BEAA6FD0242B96FC00211793 /* MovieViewController.m in Sources */,
 				BEAA6F9E242B8D5B00211793 /* FirstViewController.m in Sources */,
 			);
