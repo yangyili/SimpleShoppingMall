@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BEAA6F98242B8D5B00211793 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6F97242B8D5B00211793 /* AppDelegate.m */; };
-		BEAA6F9B242B8D5B00211793 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6F9A242B8D5B00211793 /* SceneDelegate.m */; };
 		BEAA6F9E242B8D5B00211793 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6F9D242B8D5B00211793 /* FirstViewController.m */; };
 		BEAA6FA1242B8D5B00211793 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FA0242B8D5B00211793 /* SecondViewController.m */; };
 		BEAA6FA4242B8D5B00211793 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAA6FA2242B8D5B00211793 /* Main.storyboard */; };
@@ -17,6 +16,7 @@
 		BEAA6FAC242B8D5E00211793 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FAB242B8D5E00211793 /* main.m */; };
 		BEAA6FB6242B8D5E00211793 /* SimpleShoppingMallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FB5242B8D5E00211793 /* SimpleShoppingMallTests.m */; };
 		BEAA6FC1242B8D5E00211793 /* SimpleShoppingMallUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FC0242B8D5E00211793 /* SimpleShoppingMallUITests.m */; };
+		BEAA6FD0242B96FC00211793 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FCF242B96FC00211793 /* DemoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +40,6 @@
 		BEAA6F93242B8D5B00211793 /* SimpleShoppingMall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleShoppingMall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAA6F96242B8D5B00211793 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BEAA6F97242B8D5B00211793 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BEAA6F99242B8D5B00211793 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		BEAA6F9A242B8D5B00211793 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		BEAA6F9C242B8D5B00211793 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		BEAA6F9D242B8D5B00211793 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		BEAA6F9F242B8D5B00211793 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -57,6 +55,8 @@
 		BEAA6FBC242B8D5E00211793 /* SimpleShoppingMallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleShoppingMallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAA6FC0242B8D5E00211793 /* SimpleShoppingMallUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleShoppingMallUITests.m; sourceTree = "<group>"; };
 		BEAA6FC2242B8D5E00211793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEAA6FCE242B96FC00211793 /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		BEAA6FCF242B96FC00211793 /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +109,6 @@
 			children = (
 				BEAA6F96242B8D5B00211793 /* AppDelegate.h */,
 				BEAA6F97242B8D5B00211793 /* AppDelegate.m */,
-				BEAA6F99242B8D5B00211793 /* SceneDelegate.h */,
-				BEAA6F9A242B8D5B00211793 /* SceneDelegate.m */,
 				BEAA6F9C242B8D5B00211793 /* FirstViewController.h */,
 				BEAA6F9D242B8D5B00211793 /* FirstViewController.m */,
 				BEAA6F9F242B8D5B00211793 /* SecondViewController.h */,
@@ -120,6 +118,8 @@
 				BEAA6FA7242B8D5E00211793 /* LaunchScreen.storyboard */,
 				BEAA6FAA242B8D5E00211793 /* Info.plist */,
 				BEAA6FAB242B8D5E00211793 /* main.m */,
+				BEAA6FCE242B96FC00211793 /* DemoViewController.h */,
+				BEAA6FCF242B96FC00211793 /* DemoViewController.m */,
 			);
 			path = SimpleShoppingMall;
 			sourceTree = "<group>";
@@ -275,8 +275,8 @@
 				BEAA6FAC242B8D5E00211793 /* main.m in Sources */,
 				BEAA6FA1242B8D5B00211793 /* SecondViewController.m in Sources */,
 				BEAA6F98242B8D5B00211793 /* AppDelegate.m in Sources */,
+				BEAA6FD0242B96FC00211793 /* DemoViewController.m in Sources */,
 				BEAA6F9E242B8D5B00211793 /* FirstViewController.m in Sources */,
-				BEAA6F9B242B8D5B00211793 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
