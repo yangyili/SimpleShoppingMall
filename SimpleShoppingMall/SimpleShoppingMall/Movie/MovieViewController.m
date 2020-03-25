@@ -10,9 +10,10 @@
 #import "MovieViewModel.h"
 #import "HttpClient.h"
 
-@interface MovieViewController () <MovieViewControllerProtocol>
+@interface MovieViewController () <UITableViewDelegate, UITableViewDataSource, MovieViewControllerProtocol>
 
 @property(nonatomic, strong) MovieViewModel *viewModel;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -27,15 +28,28 @@
 }
 
 #pragma -
-#pragma mark
+#pragma mark UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return [self.viewModel movieCount];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    Movie *movie = [self.viewModel movieAtIndex:indexPath.row];
+    
+    if (movie != nil) {
+        cell.textLabel.text = movie.title;
+    }
+    
     return cell;
+}
+
+#pragma -
+#pragma mark MovieViewControllerProtocol
+
+- (void)reloadData {
+    [self.tableView reloadData];
 }
 
 @end

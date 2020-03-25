@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol MovieViewControllerProtocol <NSObject>
 
+@required
+- (void) reloadData;
+
 @end
 
 @interface MovieViewModel : NSObject
