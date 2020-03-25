@@ -7,7 +7,12 @@
 //
 
 #import "MovieList.h"
+#import "Movie.h"
 
 @implementation MovieList
+
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"subjects" : [Movie class]};
+}
 
 @end

@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "HttpClientProtocol.h"
+#import "HttpClientProtocol.h"
+#import "MovieList.h"
+#import "Movie.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,6 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype) initWithHttpClient:(id<HttpClientProtocol> ) httpClient viewController:(id<MovieViewControllerProtocol>) viewController;
 
 - (void)fetchTop250;
+
+- (NSInteger) movieCount;
+
+- (Movie*) movieAtIndex:(NSInteger) index;
 
 @end
 
