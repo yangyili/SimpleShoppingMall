@@ -20,19 +20,22 @@
 
 @implementation MovieViewController
 
+- (void) awakeFromNib {
+    [super awakeFromNib];
+    HttpClient *client = [[HttpClient alloc] init];
+    self.viewModel = [[MovieViewModel alloc] initWithHttpClient:client viewController:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"MovieTableViewCell" bundle:nil] forCellReuseIdentifier:@"MovieTableViewCell"];
     
-    // Do any additional setup after loading the view.
-    HttpClient *client = [[HttpClient alloc] init];
-    self.viewModel = [[MovieViewModel alloc] initWithHttpClient:client viewController:self];
     [self.viewModel fetchTop250];
 }
 
 #pragma -
-#pragma mark UITableViewDataSource
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.viewModel movieCount];
@@ -50,7 +53,7 @@
 }
 
 #pragma -
-#pragma mark MovieViewControllerProtocol
+#pragma mark - MovieViewControllerProtocol
 
 - (void)reloadData {
     [self.tableView reloadData];

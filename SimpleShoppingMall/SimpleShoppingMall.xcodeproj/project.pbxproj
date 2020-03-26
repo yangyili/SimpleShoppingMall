@@ -140,6 +140,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BE19CBBC242CA83200B55F97 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BEAA6FD7242BA31D00211793 /* MovieViewModel.h */,
+				BEAA6FD8242BA31D00211793 /* MovieViewModel.m */,
+				BEAA6FDA242BACBA00211793 /* MovieList.h */,
+				BEAA6FDB242BACBA00211793 /* MovieList.m */,
+				BEAA6FDD242BAE1800211793 /* Movie.h */,
+				BEAA6FDE242BAE1800211793 /* Movie.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		BEAA6F8A242B8D5B00211793 = {
 			isa = PBXGroup;
 			children = (
@@ -203,15 +216,10 @@
 		BEAA6FD1242B99D500211793 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				BE19CBBC242CA83200B55F97 /* ViewModel */,
 				BEAA6FE0242BB68B00211793 /* View */,
 				BEAA6FCE242B96FC00211793 /* MovieViewController.h */,
 				BEAA6FCF242B96FC00211793 /* MovieViewController.m */,
-				BEAA6FD7242BA31D00211793 /* MovieViewModel.h */,
-				BEAA6FD8242BA31D00211793 /* MovieViewModel.m */,
-				BEAA6FDA242BACBA00211793 /* MovieList.h */,
-				BEAA6FDB242BACBA00211793 /* MovieList.m */,
-				BEAA6FDD242BAE1800211793 /* Movie.h */,
-				BEAA6FDE242BAE1800211793 /* Movie.m */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
