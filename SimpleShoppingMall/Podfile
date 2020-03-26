@@ -11,7 +11,7 @@ target 'SimpleShoppingMall' do
   # Pods for SimpleShoppingMall
   pod 'AFNetworking'
   pod 'SDWebImage'
-  pod 'YYModel'
+  pod 'YYModel',:inhibit_warnings => true
 
   target 'SimpleShoppingMallTests' do
     inherit! :search_paths
