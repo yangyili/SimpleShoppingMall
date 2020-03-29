@@ -7,10 +7,12 @@
 //
 
 #import "MovieTableViewCell.h"
+#import <SDWebImage/SDWebImage.h>
 
 @interface MovieTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *mainTitle;
 @property (weak, nonatomic) IBOutlet UILabel *subTitle;
+@property (weak, nonatomic) IBOutlet UIImageView *cover;
 
 @end
 
@@ -30,6 +32,7 @@
 - (void) configWithMovie:(Movie *) movie {
     [self.mainTitle setText:movie.title];
     [self.subTitle setText:movie.original_title];
+    [self.cover sd_setImageWithURL:[NSURL URLWithString:movie.images[@"small"]]  placeholderImage:[UIImage imageNamed: @"defaultMovie.png"]];
 }
 
 @end

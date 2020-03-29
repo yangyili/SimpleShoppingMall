@@ -9,10 +9,15 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
+@interface CoverImages : NSDictionary
+@property (nonatomic, copy) NSString *small;
+
+@end
 
 @interface Movie : NSObject
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *original_title;
+@property CoverImages *images;
 
 @end
 

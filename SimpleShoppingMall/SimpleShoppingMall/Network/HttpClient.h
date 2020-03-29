@@ -13,7 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HttpClient : NSObject <HttpClientProtocol>
-
+- (instancetype) initWithHostKey: (NSString *)hostKey;
 
 
 @end

@@ -22,7 +22,7 @@
 
 - (void) awakeFromNib {
     [super awakeFromNib];
-    HttpClient *client = [[HttpClient alloc] init];
+    HttpClient *client = [[HttpClient alloc] initWithHostKey: @""];
     self.viewModel = [[MovieViewModel alloc] initWithHttpClient:client viewController:self];
 }
 

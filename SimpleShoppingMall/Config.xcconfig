@@ -1,0 +1,14 @@
+//
+//  Config.xcconfig
+//  SimpleShoppingMall
+//
+//  Created by yangyi Li  on 2020/3/27.
+//  Copyright © 2020 Thoughtworks. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+API_PROTO=https
+API_HOST=api.2ccm.net/api/v1
+DOUBAN_HOST=douban.uieee.com

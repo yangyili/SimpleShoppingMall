@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		6531329A9D9971F2652EF0F4 /* Pods_SimpleShoppingMall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15CEFE86974E3782680C17E1 /* Pods_SimpleShoppingMall.framework */; };
 		9A3AF57032497CEA5CED86CE /* Pods_SimpleShoppingMallTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C383A9561F6EDA197B5ED8 /* Pods_SimpleShoppingMallTests.framework */; };
+		BA333B1B2430A6E8004862C5 /* GoodCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA333B1A2430A6E8004862C5 /* GoodCollectionViewCell.m */; };
+		BA333B202430D59B004862C5 /* Good.m in Sources */ = {isa = PBXBuildFile; fileRef = BA333B1F2430D59B004862C5 /* Good.m */; };
+		BA333B232430D5BA004862C5 /* GoodList.m in Sources */ = {isa = PBXBuildFile; fileRef = BA333B222430D5BA004862C5 /* GoodList.m */; };
+		BA333B262430D604004862C5 /* GoodListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA333B252430D604004862C5 /* GoodListCollectionViewController.m */; };
+		BA333B292430D7E5004862C5 /* GoodViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA333B282430D7E5004862C5 /* GoodViewModel.m */; };
 		BEAA6F98242B8D5B00211793 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6F97242B8D5B00211793 /* AppDelegate.m */; };
 		BEAA6F9E242B8D5B00211793 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6F9D242B8D5B00211793 /* FirstViewController.m */; };
 		BEAA6FA1242B8D5B00211793 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FA0242B8D5B00211793 /* SecondViewController.m */; };
@@ -50,10 +55,24 @@
 		15CEFE86974E3782680C17E1 /* Pods_SimpleShoppingMall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleShoppingMall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2600CFD0E292ECDE3292F231 /* Pods-SimpleShoppingMall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleShoppingMall.debug.xcconfig"; path = "Target Support Files/Pods-SimpleShoppingMall/Pods-SimpleShoppingMall.debug.xcconfig"; sourceTree = "<group>"; };
 		62B300AE7F8A4978F7C2E6AC /* Pods-SimpleShoppingMall-SimpleShoppingMallUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleShoppingMall-SimpleShoppingMallUITests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleShoppingMall-SimpleShoppingMallUITests/Pods-SimpleShoppingMall-SimpleShoppingMallUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		68421EBEF0631FD8713E3514 /* Pods-SimpleShoppingMall.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleShoppingMall.development.xcconfig"; path = "Target Support Files/Pods-SimpleShoppingMall/Pods-SimpleShoppingMall.development.xcconfig"; sourceTree = "<group>"; };
 		70316C7A51F9322C83C3CF66 /* Pods-SimpleShoppingMall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleShoppingMall.release.xcconfig"; path = "Target Support Files/Pods-SimpleShoppingMall/Pods-SimpleShoppingMall.release.xcconfig"; sourceTree = "<group>"; };
 		79431C45FB15DA6ECD3596C4 /* Pods-SimpleShoppingMallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleShoppingMallTests.release.xcconfig"; path = "Target Support Files/Pods-SimpleShoppingMallTests/Pods-SimpleShoppingMallTests.release.xcconfig"; sourceTree = "<group>"; };
+		80369EDF647C12C1D8EBFFCA /* Pods-SimpleShoppingMall-SimpleShoppingMallUITests.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleShoppingMall-SimpleShoppingMallUITests.development.xcconfig"; path = "Target Support Files/Pods-SimpleShoppingMall-SimpleShoppingMallUITests/Pods-SimpleShoppingMall-SimpleShoppingMallUITests.development.xcconfig"; sourceTree = "<group>"; };
 		86F973FB80E24240CC836090 /* Pods-SimpleShoppingMallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleShoppingMallTests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleShoppingMallTests/Pods-SimpleShoppingMallTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A7C383A9561F6EDA197B5ED8 /* Pods_SimpleShoppingMallTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleShoppingMallTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7866D88985780C643E445AB /* Pods-SimpleShoppingMallTests.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleShoppingMallTests.development.xcconfig"; path = "Target Support Files/Pods-SimpleShoppingMallTests/Pods-SimpleShoppingMallTests.development.xcconfig"; sourceTree = "<group>"; };
+		BA333A8C242DC951004862C5 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		BA333B192430A6E8004862C5 /* GoodCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodCollectionViewCell.h; sourceTree = "<group>"; };
+		BA333B1A2430A6E8004862C5 /* GoodCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodCollectionViewCell.m; sourceTree = "<group>"; };
+		BA333B1E2430D59B004862C5 /* Good.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Good.h; sourceTree = "<group>"; };
+		BA333B1F2430D59B004862C5 /* Good.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Good.m; sourceTree = "<group>"; };
+		BA333B212430D5BA004862C5 /* GoodList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodList.h; sourceTree = "<group>"; };
+		BA333B222430D5BA004862C5 /* GoodList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodList.m; sourceTree = "<group>"; };
+		BA333B242430D604004862C5 /* GoodListCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodListCollectionViewController.h; sourceTree = "<group>"; };
+		BA333B252430D604004862C5 /* GoodListCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodListCollectionViewController.m; sourceTree = "<group>"; };
+		BA333B272430D7E5004862C5 /* GoodViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodViewModel.h; sourceTree = "<group>"; };
+		BA333B282430D7E5004862C5 /* GoodViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodViewModel.m; sourceTree = "<group>"; };
 		BEAA6F93242B8D5B00211793 /* SimpleShoppingMall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleShoppingMall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAA6F96242B8D5B00211793 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BEAA6F97242B8D5B00211793 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -136,8 +155,44 @@
 				11B39847BC4220612CC5CC10 /* Pods-SimpleShoppingMall-SimpleShoppingMallUITests.release.xcconfig */,
 				86F973FB80E24240CC836090 /* Pods-SimpleShoppingMallTests.debug.xcconfig */,
 				79431C45FB15DA6ECD3596C4 /* Pods-SimpleShoppingMallTests.release.xcconfig */,
+				68421EBEF0631FD8713E3514 /* Pods-SimpleShoppingMall.development.xcconfig */,
+				80369EDF647C12C1D8EBFFCA /* Pods-SimpleShoppingMall-SimpleShoppingMallUITests.development.xcconfig */,
+				B7866D88985780C643E445AB /* Pods-SimpleShoppingMallTests.development.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BA333B1624308628004862C5 /* GoodList */ = {
+			isa = PBXGroup;
+			children = (
+				BA333B1824308740004862C5 /* View */,
+				BA333B1724308737004862C5 /* Model */,
+			);
+			path = GoodList;
+			sourceTree = "<group>";
+		};
+		BA333B1724308737004862C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA333B1E2430D59B004862C5 /* Good.h */,
+				BA333B1F2430D59B004862C5 /* Good.m */,
+				BA333B212430D5BA004862C5 /* GoodList.h */,
+				BA333B222430D5BA004862C5 /* GoodList.m */,
+				BA333B272430D7E5004862C5 /* GoodViewModel.h */,
+				BA333B282430D7E5004862C5 /* GoodViewModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA333B1824308740004862C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA333B192430A6E8004862C5 /* GoodCollectionViewCell.h */,
+				BA333B1A2430A6E8004862C5 /* GoodCollectionViewCell.m */,
+				BA333B242430D604004862C5 /* GoodListCollectionViewController.h */,
+				BA333B252430D604004862C5 /* GoodListCollectionViewController.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BE19CBBC242CA83200B55F97 /* ViewModel */ = {
@@ -156,6 +211,7 @@
 		BEAA6F8A242B8D5B00211793 = {
 			isa = PBXGroup;
 			children = (
+				BA333A8C242DC951004862C5 /* Config.xcconfig */,
 				BEAA6F95242B8D5B00211793 /* SimpleShoppingMall */,
 				BEAA6FB4242B8D5E00211793 /* SimpleShoppingMallTests */,
 				BEAA6FBF242B8D5E00211793 /* SimpleShoppingMallUITests */,
@@ -178,6 +234,7 @@
 		BEAA6F95242B8D5B00211793 /* SimpleShoppingMall */ = {
 			isa = PBXGroup;
 			children = (
+				BA333B1624308628004862C5 /* GoodList */,
 				BEAA6FD2242B9B4300211793 /* Network */,
 				BEAA6FD1242B99D500211793 /* Movie */,
 				BEAA6F96242B8D5B00211793 /* AppDelegate.h */,
@@ -312,7 +369,7 @@
 		BEAA6F8B242B8D5B00211793 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = Thoughtworks;
 				TargetAttributes = {
 					BEAA6F92242B8D5B00211793 = {
@@ -502,14 +559,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEAA6FD5242B9B7300211793 /* HttpClient.m in Sources */,
+				BA333B1B2430A6E8004862C5 /* GoodCollectionViewCell.m in Sources */,
 				BEAA6FAC242B8D5E00211793 /* main.m in Sources */,
 				BEAA6FDC242BACBA00211793 /* MovieList.m in Sources */,
 				BEAA6FA1242B8D5B00211793 /* SecondViewController.m in Sources */,
 				BEAA6FD9242BA31D00211793 /* MovieViewModel.m in Sources */,
 				BEAA6F98242B8D5B00211793 /* AppDelegate.m in Sources */,
+				BA333B232430D5BA004862C5 /* GoodList.m in Sources */,
 				BEAA6FDF242BAE1800211793 /* Movie.m in Sources */,
+				BA333B292430D7E5004862C5 /* GoodViewModel.m in Sources */,
 				BEAA6FD0242B96FC00211793 /* MovieViewController.m in Sources */,
 				BEAA6FE7242BB6D300211793 /* MovieTableViewCell.m in Sources */,
+				BA333B262430D604004862C5 /* GoodListCollectionViewController.m in Sources */,
+				BA333B202430D59B004862C5 /* Good.m in Sources */,
 				BEAA6F9E242B8D5B00211793 /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,6 +629,7 @@
 /* Begin XCBuildConfiguration section */
 		BEAA6FC3242B8D5E00211793 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA333A8C242DC951004862C5 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -715,6 +778,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 86F973FB80E24240CC836090 /* Pods-SimpleShoppingMallTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 25EZUPR5QA;
@@ -736,6 +800,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 79431C45FB15DA6ECD3596C4 /* Pods-SimpleShoppingMallTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 25EZUPR5QA;
@@ -801,7 +866,7 @@
 				BEAA6FC4242B8D5E00211793 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		BEAA6FC5242B8D5E00211793 /* Build configuration list for PBXNativeTarget "SimpleShoppingMall" */ = {
 			isa = XCConfigurationList;
@@ -810,7 +875,7 @@
 				BEAA6FC7242B8D5E00211793 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		BEAA6FC8242B8D5E00211793 /* Build configuration list for PBXNativeTarget "SimpleShoppingMallTests" */ = {
 			isa = XCConfigurationList;
@@ -819,7 +884,7 @@
 				BEAA6FCA242B8D5E00211793 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		BEAA6FCB242B8D5E00211793 /* Build configuration list for PBXNativeTarget "SimpleShoppingMallUITests" */ = {
 			isa = XCConfigurationList;
@@ -828,7 +893,7 @@
 				BEAA6FCD242B8D5E00211793 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

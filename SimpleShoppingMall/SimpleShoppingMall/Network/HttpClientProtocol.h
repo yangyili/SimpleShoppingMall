@@ -11,7 +11,8 @@
 
 @protocol HttpClientProtocol <NSObject>
 
-+ (NSURL *_Nonnull) host;
++ (NSURL *_Nonnull) DoubanHost;
++ (NSURL *_Nonnull) MallHost;
 
 - (void)getDataWithPath:(NSString * _Nonnull)path parameters:(id _Nullable)parameters success:(void (^ _Nullable)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^ _Nullable)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure;
 

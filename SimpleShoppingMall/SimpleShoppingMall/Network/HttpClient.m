@@ -11,18 +11,30 @@
 
 @interface HttpClient ()
 @property (nonatomic, strong) AFHTTPSessionManager *sessionManger;
+
 @end
 
 @implementation HttpClient
 
--(instancetype)init{
+-(instancetype)initWithHostKey: (NSString *)hostKey{
     self = [super init];
-    self.sessionManger = [[AFHTTPSessionManager alloc] initWithBaseURL:[HttpClient host]];
+    NSURL *url = [HttpClient DoubanHost];
+    if ([hostKey isEqualToString:@"mall"]) {
+        url = [HttpClient MallHost];
+    }
+    self.sessionManger = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
     return self;
 }
 
-+ (NSURL * _Nonnull)host {
-    return [NSURL URLWithString:@"https://douban.uieee.com/"];
++ (NSURL * _Nonnull)DoubanHost {
+    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist"];
+    NSMutableDictionary *infoDict = [NSMutableDictionary dictionaryWithContentsOfFile:bundlePath];
+    NSString *host = [infoDict objectForKey:@"DOUBAN_HOST"];
+    return [NSURL URLWithString:[NSString stringWithFormat:@"https://%@", host]];
+}
+
++ (NSURL * _Nonnull)MallHost{
+    return [NSURL URLWithString:@"https://api.2ccm.net"];
 }
 
 - (void)getDataWithPath:(NSString * _Nonnull)path parameters:(id _Nullable)parameters success:(void (^ _Nullable)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^ _Nullable)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure {
