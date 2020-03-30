@@ -34,7 +34,8 @@
 }
 
 + (NSURL * _Nonnull)MallHost{
-    return [NSURL URLWithString:@"https://api.2ccm.net"];
+//  private letter yangyi
+    return [NSURL URLWithString:@"https://example.com"];
 }
 
 - (void)getDataWithPath:(NSString * _Nonnull)path parameters:(id _Nullable)parameters success:(void (^ _Nullable)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^ _Nullable)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure {
