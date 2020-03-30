@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Good : NSObject
 @property NSString *name;
 @property NSString *brand;
+@property NSInteger price;
 @property NSString *cover_image;
 
 @end

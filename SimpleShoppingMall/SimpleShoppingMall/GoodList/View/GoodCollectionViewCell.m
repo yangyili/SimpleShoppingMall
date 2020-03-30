@@ -7,7 +7,22 @@
 //
 
 #import "GoodCollectionViewCell.h"
+#import <SDWebImage/SDWebImage.h>
+
+@interface GoodCollectionViewCell ()
+@property (weak, nonatomic) IBOutlet UIImageView *cover;
+@property (weak, nonatomic) IBOutlet UILabel *brand;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *price;
+
+@end
 
 @implementation GoodCollectionViewCell
 
+-(void) configCell:(Good *)good{
+    [self.brand setText:good.brand];
+    [self.name setText:good.name];
+    [self.price setText: [NSString stringWithFormat:@"%ld", good.price]];
+    [self.cover sd_setImageWithURL:[NSURL URLWithString:good.cover_image] placeholderImage:[UIImage imageNamed:@"defaultGood.jpg"]];
+}
 @end

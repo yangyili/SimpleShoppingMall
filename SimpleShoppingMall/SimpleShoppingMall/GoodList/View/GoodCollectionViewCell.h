@@ -7,14 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Good.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GoodCollectionViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *cover;
-@property (weak, nonatomic) IBOutlet UILabel *brand;
-@property (weak, nonatomic) IBOutlet UILabel *name;
-@property (weak, nonatomic) IBOutlet UILabel *price;
+
+- (void) configCell:(Good *)good;
 
 @end
 
