@@ -10,5 +10,4 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 API_PROTO=https
-API_HOST=api.2ccm.net/api/v1
 DOUBAN_HOST=douban.uieee.com

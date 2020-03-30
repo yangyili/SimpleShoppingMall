@@ -22,7 +22,7 @@
 -(void) configCell:(Good *)good{
     [self.brand setText:good.brand];
     [self.name setText:good.name];
-    [self.price setText: [NSString stringWithFormat:@"%ld", good.price]];
+    [self.price setText: [NSString stringWithFormat:@"¥%ld", (NSInteger)ceil(good.price/100)]];
     [self.cover sd_setImageWithURL:[NSURL URLWithString:good.cover_image] placeholderImage:[UIImage imageNamed:@"defaultGood.jpg"]];
 }
 @end

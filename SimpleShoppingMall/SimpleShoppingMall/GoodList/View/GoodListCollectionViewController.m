@@ -20,7 +20,6 @@
 @implementation GoodListCollectionViewController
 
 static NSString * const reuseIdentifier = @"goodintro";
-static NSInteger const sectionItemNumber = 2;
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -58,13 +57,8 @@ static NSInteger const sectionItemNumber = 2;
 
 #pragma mark <UICollectionViewDataSource>
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return ceil([self.viewModel goodCount] / sectionItemNumber);
-}
-
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return sectionItemNumber;
+    return [self.viewModel goodCount];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
