@@ -33,25 +33,25 @@
 }
 
 - (void)automaticScroll {
-  CGPoint currentPoint = self.carouselScrollView.contentOffset;
+    CGPoint currentPoint = self.carouselScrollView.contentOffset;
 
-  currentPoint.x += self.carouselScrollView.bounds.size.width;
+    currentPoint.x += self.carouselScrollView.bounds.size.width;
 
-  [self.carouselScrollView setContentOffset:currentPoint animated:YES];
+    [self.carouselScrollView setContentOffset:currentPoint animated:YES];
 }
 
 
 - (void)startMyTimer {
-  NSTimer *newTimer =
+    NSTimer *newTimer =
     [NSTimer scheduledTimerWithTimeInterval:3.0
                                      target:self
                                      selector:@selector(automaticScroll)
                                      userInfo:nil
                                       repeats:YES];
 
-  _timer = newTimer;
+    _timer = newTimer;
 
-  [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
 }
 /*
 #pragma mark - Navigation

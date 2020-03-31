@@ -12,7 +12,7 @@
 #import "GoodViewModel.h"
 #import "GoodDetailViewController.h"
 
-@interface GoodListCollectionViewController ()<GoodListViewControllerProtocol>
+@interface GoodListCollectionViewController ()<GoodListViewControllerProtocol, UICollectionViewDelegateFlowLayout>
 
 @property(nonatomic, strong) GoodViewModel *viewModel;
 
@@ -78,6 +78,10 @@ static NSString * const reuseIdentifier = @"goodintro";
     UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     GoodDetailViewController *detailView = [main instantiateViewControllerWithIdentifier:@"gooddetail"];
     [self.navigationController pushViewController:detailView animated:YES];
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake(200, 340);
 }
 #pragma mark <UICollectionViewDelegate>
 
