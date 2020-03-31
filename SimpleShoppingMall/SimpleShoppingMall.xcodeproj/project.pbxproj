@@ -15,7 +15,6 @@
 		BA333B262430D604004862C5 /* GoodListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA333B252430D604004862C5 /* GoodListCollectionViewController.m */; };
 		BA333B292430D7E5004862C5 /* GoodViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA333B282430D7E5004862C5 /* GoodViewModel.m */; };
 		BA333B2C24320925004862C5 /* GoodDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA333B2B24320925004862C5 /* GoodDetailViewController.m */; };
-		BA333B2F24324C7C004862C5 /* CarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA333B2E24324C7C004862C5 /* CarouselView.m */; };
 		BEAA6F98242B8D5B00211793 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6F97242B8D5B00211793 /* AppDelegate.m */; };
 		BEAA6F9E242B8D5B00211793 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6F9D242B8D5B00211793 /* FirstViewController.m */; };
 		BEAA6FA1242B8D5B00211793 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FA0242B8D5B00211793 /* SecondViewController.m */; };
@@ -77,8 +76,6 @@
 		BA333B282430D7E5004862C5 /* GoodViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodViewModel.m; sourceTree = "<group>"; };
 		BA333B2A24320925004862C5 /* GoodDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodDetailViewController.h; sourceTree = "<group>"; };
 		BA333B2B24320925004862C5 /* GoodDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodDetailViewController.m; sourceTree = "<group>"; };
-		BA333B2D24324C7C004862C5 /* CarouselView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarouselView.h; sourceTree = "<group>"; };
-		BA333B2E24324C7C004862C5 /* CarouselView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarouselView.m; sourceTree = "<group>"; };
 		BEAA6F93242B8D5B00211793 /* SimpleShoppingMall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleShoppingMall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAA6F96242B8D5B00211793 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BEAA6F97242B8D5B00211793 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -199,8 +196,6 @@
 				BA333B252430D604004862C5 /* GoodListCollectionViewController.m */,
 				BA333B2A24320925004862C5 /* GoodDetailViewController.h */,
 				BA333B2B24320925004862C5 /* GoodDetailViewController.m */,
-				BA333B2D24324C7C004862C5 /* CarouselView.h */,
-				BA333B2E24324C7C004862C5 /* CarouselView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -584,7 +579,6 @@
 				BA333B262430D604004862C5 /* GoodListCollectionViewController.m in Sources */,
 				BA333B202430D59B004862C5 /* Good.m in Sources */,
 				BEAA6F9E242B8D5B00211793 /* FirstViewController.m in Sources */,
-				BA333B2F24324C7C004862C5 /* CarouselView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
