@@ -12,6 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Good : NSObject
+@property NSInteger id;
 @property NSString *name;
 @property NSString *brand;
 @property NSInteger price;

@@ -10,8 +10,9 @@
 #import "GoodCollectionViewCell.h"
 #import "HttpClient.h"
 #import "GoodViewModel.h"
+#import "GoodDetailViewController.h"
 
-@interface GoodListCollectionViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, GoodListViewControllerProtocol>
+@interface GoodListCollectionViewController ()<GoodListViewControllerProtocol>
 
 @property(nonatomic, strong) GoodViewModel *viewModel;
 
@@ -71,6 +72,13 @@ static NSString * const reuseIdentifier = @"goodintro";
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    Good *good = [self.viewModel goodAtIndex:indexPath.item];
+    NSLog(@"select good: %ld", good.id);
+    UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    GoodDetailViewController *detailView = [main instantiateViewControllerWithIdentifier:@"gooddetail"];
+    [self.navigationController pushViewController:detailView animated:YES];
+}
 #pragma mark <UICollectionViewDelegate>
 
 /*
