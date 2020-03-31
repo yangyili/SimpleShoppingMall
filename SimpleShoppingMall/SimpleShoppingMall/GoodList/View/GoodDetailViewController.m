@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self startMyTimer];
+    [self startCarouselTimer];
     [self.carouselScrollView setContentOffset: CGPointMake(self.carouselScrollView.bounds.size.width, 0)
  animated:YES];
     [self.carouselPageControl setNumberOfPages:4];
@@ -34,14 +34,17 @@
 
 - (void)automaticScroll {
     CGPoint currentPoint = self.carouselScrollView.contentOffset;
-
-    currentPoint.x += self.carouselScrollView.bounds.size.width;
-
-    [self.carouselScrollView setContentOffset:currentPoint animated:YES];
+    if (currentPoint.x >= self.carouselScrollView.bounds.size.width) {
+        currentPoint.x = -self.carouselScrollView.bounds.size.width;
+        [self.carouselScrollView setContentOffset:currentPoint animated:NO];
+    } else {
+        currentPoint.x += self.carouselScrollView.bounds.size.width;
+        [self.carouselScrollView setContentOffset:currentPoint animated:YES];
+    }
 }
 
 
-- (void)startMyTimer {
+- (void)startCarouselTimer {
     NSTimer *newTimer =
     [NSTimer scheduledTimerWithTimeInterval:3.0
                                      target:self
@@ -52,6 +55,15 @@
     _timer = newTimer;
 
     [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+}
+
+- (void)endCarouselTimer {
+    [_timer invalidate];
+    _timer = nil;
+}
+
+- (void) viewWillDisappear:(BOOL)animated{
+    [self endCarouselTimer];
 }
 /*
 #pragma mark - Navigation
