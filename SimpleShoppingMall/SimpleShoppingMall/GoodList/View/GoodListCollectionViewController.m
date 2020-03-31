@@ -39,13 +39,21 @@ static NSString * const reuseIdentifier = @"goodintro";
     
     // Do any additional setup after loading the view.
     NSInteger brand = 15;
-    [self.viewModel fetchGoodByBrand: brand];
+    [self.viewModel fetchGoodBy: brand];
 }
 
 
 - (void) reloadData {
     [self.collectionView reloadData];
 }
+
+- (void) pushDetailViewWithGoodDetail: (GoodDetail*)good{
+    UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    GoodDetailViewController *detailView = [main instantiateViewControllerWithIdentifier:@"gooddetail"];
+    detailView.good = good;
+    [self.navigationController pushViewController:detailView animated:YES];
+}
+    
 /*
 #pragma mark - Navigation
 
@@ -75,9 +83,7 @@ static NSString * const reuseIdentifier = @"goodintro";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     Good *good = [self.viewModel goodAtIndex:indexPath.item];
     NSLog(@"select good: %ld", good.id);
-    UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    GoodDetailViewController *detailView = [main instantiateViewControllerWithIdentifier:@"gooddetail"];
-    [self.navigationController pushViewController:detailView animated:YES];
+    [self.viewModel fetchGoodDetailBy: good.id];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{

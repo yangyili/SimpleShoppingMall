@@ -10,19 +10,22 @@
 #import "HttpClientProtocol.h"
 #import "Good.h"
 #import "GoodList.h"
+#import "GoodDetail.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol GoodListViewControllerProtocol <NSObject>
 
 @required
 - (void) reloadData;
+- (void) pushDetailViewWithGoodDetail: (GoodDetail*)good;
 
 @end
 
 @interface GoodViewModel : NSObject
 -(instancetype) initWithHttpClient: (id<HttpClientProtocol>) httpClient viewController:(id<GoodListViewControllerProtocol>) viewController;
 
-- (void) fetchGoodByBrand: (NSInteger)brand;
+- (void) fetchGoodBy: (NSInteger)brand;
+- (void) fetchGoodDetailBy: (NSInteger)goodId;
 
 - (NSInteger) goodCount;
 

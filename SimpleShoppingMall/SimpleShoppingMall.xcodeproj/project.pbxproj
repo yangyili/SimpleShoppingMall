@@ -15,6 +15,7 @@
 		BA333B262430D604004862C5 /* GoodListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA333B252430D604004862C5 /* GoodListCollectionViewController.m */; };
 		BA333B292430D7E5004862C5 /* GoodViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA333B282430D7E5004862C5 /* GoodViewModel.m */; };
 		BA333B2C24320925004862C5 /* GoodDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA333B2B24320925004862C5 /* GoodDetailViewController.m */; };
+		BA333B3524338498004862C5 /* GoodDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = BA333B3424338498004862C5 /* GoodDetail.m */; };
 		BEAA6F98242B8D5B00211793 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6F97242B8D5B00211793 /* AppDelegate.m */; };
 		BEAA6F9E242B8D5B00211793 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6F9D242B8D5B00211793 /* FirstViewController.m */; };
 		BEAA6FA1242B8D5B00211793 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA6FA0242B8D5B00211793 /* SecondViewController.m */; };
@@ -76,6 +77,8 @@
 		BA333B282430D7E5004862C5 /* GoodViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodViewModel.m; sourceTree = "<group>"; };
 		BA333B2A24320925004862C5 /* GoodDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodDetailViewController.h; sourceTree = "<group>"; };
 		BA333B2B24320925004862C5 /* GoodDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodDetailViewController.m; sourceTree = "<group>"; };
+		BA333B3324338498004862C5 /* GoodDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodDetail.h; sourceTree = "<group>"; };
+		BA333B3424338498004862C5 /* GoodDetail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodDetail.m; sourceTree = "<group>"; };
 		BEAA6F93242B8D5B00211793 /* SimpleShoppingMall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleShoppingMall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAA6F96242B8D5B00211793 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BEAA6F97242B8D5B00211793 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -178,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				BA333B1E2430D59B004862C5 /* Good.h */,
+				BA333B3324338498004862C5 /* GoodDetail.h */,
+				BA333B3424338498004862C5 /* GoodDetail.m */,
 				BA333B1F2430D59B004862C5 /* Good.m */,
 				BA333B212430D5BA004862C5 /* GoodList.h */,
 				BA333B222430D5BA004862C5 /* GoodList.m */,
@@ -571,6 +576,7 @@
 				BEAA6FA1242B8D5B00211793 /* SecondViewController.m in Sources */,
 				BEAA6FD9242BA31D00211793 /* MovieViewModel.m in Sources */,
 				BEAA6F98242B8D5B00211793 /* AppDelegate.m in Sources */,
+				BA333B3524338498004862C5 /* GoodDetail.m in Sources */,
 				BA333B232430D5BA004862C5 /* GoodList.m in Sources */,
 				BEAA6FDF242BAE1800211793 /* Movie.m in Sources */,
 				BA333B292430D7E5004862C5 /* GoodViewModel.m in Sources */,

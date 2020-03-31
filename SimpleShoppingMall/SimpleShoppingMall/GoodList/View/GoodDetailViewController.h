@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GoodDetail.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GoodDetailViewController : UIViewController
+
+@property(nonatomic, retain) GoodDetail *good;
 
 @end
 

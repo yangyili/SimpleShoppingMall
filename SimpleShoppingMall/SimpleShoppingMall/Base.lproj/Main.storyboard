@@ -90,7 +90,6 @@
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RZF-h2-OBg">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="574"/>
-                                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="574" id="O4n-Wu-bit"/>
                                                                     <constraint firstAttribute="width" constant="414" id="uE0-5p-eBh"/>
@@ -98,7 +97,6 @@
                                                             </imageView>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wKh-0g-9bk">
                                                                 <rect key="frame" x="414" y="0.0" width="414" height="574"/>
-                                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="414" id="GOS-eq-gKI"/>
                                                                     <constraint firstAttribute="height" constant="574" id="bjW-uB-asW"/>
@@ -106,7 +104,6 @@
                                                             </imageView>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Ix-KD-U49">
                                                                 <rect key="frame" x="828" y="0.0" width="414" height="574"/>
-                                                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="414" id="ZNN-dq-3sX"/>
                                                                     <constraint firstAttribute="height" constant="574" id="czG-6d-en7"/>
@@ -117,13 +114,14 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="9vR-Mj-xXi"/>
                                                                 </constraints>
+                                                                <color key="pageIndicatorTintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                                <color key="currentPageIndicatorTintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             </pageControl>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="574" id="3bh-58-yG0"/>
                                                             <constraint firstItem="RZF-h2-OBg" firstAttribute="leading" secondItem="Aw7-Ga-Y6z" secondAttribute="leading" id="Aqb-wv-fwF"/>
-                                                            <constraint firstItem="Yg0-PL-AaT" firstAttribute="centerX" secondItem="wKh-0g-9bk" secondAttribute="centerX" id="Fbw-lT-FRI"/>
                                                             <constraint firstItem="RZF-h2-OBg" firstAttribute="top" secondItem="Aw7-Ga-Y6z" secondAttribute="top" id="Ixr-rk-Yow"/>
                                                             <constraint firstItem="2Ix-KD-U49" firstAttribute="top" secondItem="Aw7-Ga-Y6z" secondAttribute="top" id="O9j-9y-M7b"/>
                                                             <constraint firstItem="wKh-0g-9bk" firstAttribute="leading" secondItem="RZF-h2-OBg" secondAttribute="trailing" id="TuY-yS-3Jr"/>
@@ -149,6 +147,7 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
+                                            <constraint firstItem="Yg0-PL-AaT" firstAttribute="centerX" secondItem="cHw-7n-z92" secondAttribute="centerX" id="6Hf-Fr-roQ"/>
                                             <constraint firstItem="uln-PT-kjd" firstAttribute="width" secondItem="cHw-7n-z92" secondAttribute="width" id="UIj-bh-OWn"/>
                                             <constraint firstItem="uln-PT-kjd" firstAttribute="top" secondItem="cHw-7n-z92" secondAttribute="top" id="o6e-2P-PfF"/>
                                             <constraint firstItem="uln-PT-kjd" firstAttribute="leading" secondItem="cHw-7n-z92" secondAttribute="leading" id="sZY-Hr-gY4"/>

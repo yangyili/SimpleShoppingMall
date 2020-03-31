@@ -25,9 +25,9 @@
     return self;
 }
 
-- (void) fetchGoodByBrand: (NSInteger)brand{
+- (void) fetchGoodBy: (NSInteger)brandID{
     NSInteger defaultBrand = 15;
-    NSDictionary *filterParams = @{@"filter_action": @"brand_product", @"filter_data": [NSString stringWithFormat:@"%ld", brand ? brand : defaultBrand]};
+    NSDictionary *filterParams = @{@"filter_action": @"brand_product", @"filter_data": [NSString stringWithFormat:@"%ld", brandID ? brandID : defaultBrand]};
     [self.httpClient getDataWithPath:@"/api/v2/products.json" parameters:filterParams success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
         self.list = [GoodList yy_modelWithDictionary:responseObject];
         [self.viewController reloadData];
@@ -36,6 +36,14 @@
     }];
 }
 
+- (void) fetchGoodDetailBy: (NSInteger)goodId{
+    [self.httpClient getDataWithPath:[NSString stringWithFormat:@"/api/v1/products/%ld.json", goodId] parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
+        GoodDetail *good = [GoodDetail yy_modelWithDictionary:responseObject];
+        [self.viewController pushDetailViewWithGoodDetail: good];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"get good detail error: %@", error);
+    }];
+}
 - (NSInteger) goodCount{
     if (self.list && self.list.products) {
         return self.list.products.count;
