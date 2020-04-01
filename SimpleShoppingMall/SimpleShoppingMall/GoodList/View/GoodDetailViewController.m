@@ -23,6 +23,7 @@
 @property(nonatomic, assign) NSInteger carouselImageCount;
 @property(nonatomic, strong) NSTimer *timer;
 @property(nonatomic, copy) NSMutableArray *carouselImages;
+@property(nonatomic, assign) NSInteger carouselImageLeadingSpaceCarouselScrollView;
 @end
 
 @implementation GoodDetailViewController
@@ -30,21 +31,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self calculateCarouselImageLeadingSpace];
     [self setCarouselImages];
     [self startCarouselTimer];
     [self.carouselScrollView setContentOffset: CGPointMake(self.carouselScrollView.bounds.size.width, 0)
  animated:YES];
 }
 
+- (void)calculateCarouselImageLeadingSpace {
+    NSInteger imageWidth = self.carouselCenterImage.bounds.size.width;
+    NSInteger scrollviewWidth = self.carouselScrollView.bounds.size.width;
+    _carouselImageLeadingSpaceCarouselScrollView = (scrollviewWidth - imageWidth)/2;
+}
+
 - (void)automaticScroll {
     CGPoint currentPoint = self.carouselScrollView.contentOffset;
-    if (currentPoint.x >= self.carouselScrollView.bounds.size.width) {
-        currentPoint.x = -self.carouselScrollView.bounds.size.width;
-        [self.carouselScrollView setContentOffset:currentPoint animated:NO];
-    } else {
-        currentPoint.x += self.carouselScrollView.bounds.size.width;
-        [self.carouselScrollView setContentOffset:currentPoint animated:YES];
-    }
+    currentPoint.x += self.carouselScrollView.bounds.size.width;
+    [self.carouselScrollView setContentOffset:currentPoint animated:YES];
 }
 
 
@@ -82,12 +85,29 @@
 /*
  carousel scrollview
  */
+- (NSInteger)leftImageIndex {
+    if (_currentImageIndex == 0) {
+        _leftImageIndex = _carouselImageCount - 1;
+    } else {
+        _leftImageIndex = _currentImageIndex - 1;
+    }
+    return _leftImageIndex;
+}
+
+- (NSInteger)rightImageIndex {
+    if (_currentImageIndex == _carouselImageCount - 1) {
+        _rightImageIndex = 0;
+    } else {
+        _rightImageIndex = _currentImageIndex + 1;
+    }
+    return _rightImageIndex;
+}
 
 - (void)currentImageIndexAdd {
-    if (_carouselImageCount == 0 || self.currentImageIndex == _carouselImageCount - 1) {
+    if (self.currentImageIndex == _carouselImageCount - 1) {
         self.currentImageIndex = 0;
     } else {
-        self.currentImageIndex = self.currentImageIndex + 1;
+        self.currentImageIndex +=  1;
     }
 }
 
@@ -95,7 +115,7 @@
     if (self.currentImageIndex == 0) {
         self.currentImageIndex = _carouselImageCount - 1;
     } else {
-        self.currentImageIndex = self.currentImageIndex - 1;
+        self.currentImageIndex -= 1;
     }
 }
 
