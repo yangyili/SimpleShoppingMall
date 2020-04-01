@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSInteger price;
 @property NSString *cover_image;
 @property NSArray *product_images;
+@property NSArray *detail_notice;
 @end
 
 NS_ASSUME_NONNULL_END

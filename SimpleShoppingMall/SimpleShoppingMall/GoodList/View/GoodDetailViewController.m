@@ -16,7 +16,17 @@
 @property (weak, nonatomic) IBOutlet UIImageView *carouselLeftImage;
 @property (weak, nonatomic) IBOutlet UIImageView *carouselCenterImage;
 @property (weak, nonatomic) IBOutlet UIImageView *carouselRightImage;
+@property (weak, nonatomic) IBOutlet UILabel *brand;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *price;
 
+@property (weak, nonatomic) IBOutlet UIButton *selectGoodButton;
+@property (weak, nonatomic) IBOutlet UILabel *baseNotice1;
+@property (weak, nonatomic) IBOutlet UILabel *baseNotice2;
+
+@property (weak, nonatomic) IBOutlet UILabel *sizeNotice1;
+@property (weak, nonatomic) IBOutlet UILabel *sizeNotice2;
+@property (weak, nonatomic) IBOutlet UILabel *logisticsService;
 @property(nonatomic, assign) NSInteger leftImageIndex;
 @property(nonatomic, assign) NSInteger rightImageIndex;
 @property(nonatomic, assign) NSUInteger currentImageIndex;
@@ -32,10 +42,47 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self calculateCarouselImageLeadingSpace];
+    [self setGoodDetail];
+    [self initIBoutletStyle];
     [self setCarouselImages];
     [self startCarouselTimer];
     [self.carouselScrollView setContentOffset: CGPointMake(self.carouselScrollView.bounds.size.width, 0)
  animated:YES];
+}
+
+- (void) initIBoutletStyle{
+    self.selectGoodButton.layer.cornerRadius = 10;
+    self.selectGoodButton.layer.borderWidth = 1;
+    self.selectGoodButton.layer.borderColor = UIColor.grayColor.CGColor;
+}
+- (void) setGoodDetail{
+    [self.brand setText:_good.brand];
+    [self.name setText:_good.name];
+    [self.price setText:[NSString stringWithFormat:@"¥%ld" , (NSInteger)ceil(_good.price/100)]];
+    NSInteger detailNoticeCount = 3;
+    for (int i=0; i<detailNoticeCount; i++) {
+        NSDictionary *notice = [_good.detail_notice objectAtIndex:i];
+        NSString *title = notice[@"title"];
+        NSArray *notices = notice[@"notice"];
+        NSError *error = nil;
+        NSRegularExpression *regexhtmla = [NSRegularExpression regularExpressionWithPattern:@"(<a.*?>|</a>)" options:NSRegularExpressionCaseInsensitive error:&error];
+        NSRegularExpression *regexhtmlcopy = [NSRegularExpression regularExpressionWithPattern:@"(<copy.*?>|</copy>)" options:NSRegularExpressionCaseInsensitive error:&error];
+        if ([title isEqual:@"基本信息"]  ) {
+            NSString *notice0 = [notices objectAtIndex:0];
+            NSString *notice1 = [notices objectAtIndex:1];
+            [self.baseNotice1 setText:[regexhtmlcopy stringByReplacingMatchesInString:notice0 options:0 range:NSMakeRange(0, [notice0 length]) withTemplate:@""]];
+            [self.baseNotice2 setText:[regexhtmlcopy stringByReplacingMatchesInString:notice1 options:0 range:NSMakeRange(0, [notice1 length]) withTemplate:@""]];
+        }
+        if ([title isEqual:@"尺码参考"]  ) {
+            NSString *notice0 = [notices objectAtIndex:0];
+            NSString *notice1 = [notices objectAtIndex:1];
+            [self.sizeNotice1 setText:[regexhtmla stringByReplacingMatchesInString:notice0 options:0 range:NSMakeRange(0, [notice0 length]) withTemplate:@""]];
+            [self.sizeNotice2 setText:[regexhtmla stringByReplacingMatchesInString:notice1 options:0 range:NSMakeRange(0, [notice1 length]) withTemplate:@""]];
+        }
+        if ([title isEqual:@"物流售后"]  ) {
+            [self.logisticsService setText:[regexhtmla stringByReplacingMatchesInString:[notices objectAtIndex:0] options:0 range:NSMakeRange(0, [[notices objectAtIndex:0] length]) withTemplate:@""]];
+        }
+    }
 }
 
 - (void)calculateCarouselImageLeadingSpace {
@@ -101,6 +148,13 @@
         _rightImageIndex = _currentImageIndex + 1;
     }
     return _rightImageIndex;
+}
+
+- (NSUInteger)currentImageIndex {
+    if (!_currentImageIndex) {
+        _currentImageIndex = 0;
+    }
+    return _currentImageIndex;
 }
 
 - (void)currentImageIndexAdd {
