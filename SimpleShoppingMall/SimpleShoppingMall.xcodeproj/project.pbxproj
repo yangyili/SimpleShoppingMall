@@ -181,10 +181,10 @@
 			isa = PBXGroup;
 			children = (
 				BA333B1E2430D59B004862C5 /* Good.h */,
-				BA333B3324338498004862C5 /* GoodDetail.h */,
 				BA333B3424338498004862C5 /* GoodDetail.m */,
 				BA333B1F2430D59B004862C5 /* Good.m */,
 				BA333B212430D5BA004862C5 /* GoodList.h */,
+				BA333B3324338498004862C5 /* GoodDetail.h */,
 				BA333B222430D5BA004862C5 /* GoodList.m */,
 				BA333B272430D7E5004862C5 /* GoodViewModel.h */,
 				BA333B282430D7E5004862C5 /* GoodViewModel.m */,

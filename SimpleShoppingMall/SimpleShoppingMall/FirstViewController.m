@@ -40,6 +40,7 @@
     }
     if (brandID > 0) {
         vc.currentBrand = brandID;
+        vc.navigationItem.title = btnText;
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
