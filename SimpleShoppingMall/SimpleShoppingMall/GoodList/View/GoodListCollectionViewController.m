@@ -16,7 +16,6 @@
 
 @property(nonatomic, strong) GoodViewModel *viewModel;
 @property NSInteger currentPage;
-@property NSInteger currentBrand;
 
 @end
 
@@ -41,7 +40,6 @@ static NSString * const reuseIdentifier = @"goodintro";
 //    [self.collectionView registerClass:[GoodCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
-    self.currentBrand = 15;
     self.currentPage = 1;
     [self.viewModel fetchGoodBy: _currentBrand withPage: _currentPage];
 }

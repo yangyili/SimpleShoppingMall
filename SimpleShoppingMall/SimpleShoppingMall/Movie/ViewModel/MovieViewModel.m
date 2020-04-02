@@ -31,7 +31,7 @@
         self.list = [MovieList yy_modelWithDictionary:responseObject];
         [self.viewController reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@", error);
+        NSLog(@"get movies error:%@", error);
     }];
     
 }

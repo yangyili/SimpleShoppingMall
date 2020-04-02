@@ -16,53 +16,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="131.5" y="426.5" width="151" height="43"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="110" y="477.5" width="194.5" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mlU-uB-PE4">
-                                <rect key="frame" x="20" y="97" width="122" height="80"/>
+                                <rect key="frame" x="20" y="114" width="90" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="CAj-mh-AnU"/>
-                                    <constraint firstAttribute="width" constant="122" id="cYW-c1-xZ2"/>
+                                    <constraint firstAttribute="width" constant="90" id="u6a-wA-FPg"/>
+                                    <constraint firstAttribute="height" constant="120" id="vNe-vi-vzu"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFc-6G-2Ua">
-                                <rect key="frame" x="52" y="185" width="58" height="46"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NvM-gf-AhM">
+                                <rect key="frame" x="162" y="114" width="90" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="2mp-CP-zxg"/>
+                                    <constraint firstAttribute="width" constant="90" id="lBi-nw-TTN"/>
+                                    <constraint firstAttribute="height" constant="120" id="ott-C7-Mkl"/>
                                 </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zjs-CP-DUX">
+                                <rect key="frame" x="288" y="114" width="90" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="cdu-on-QCX"/>
+                                    <constraint firstAttribute="height" constant="120" id="xIh-yR-Tzj"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hId-dP-Gzs">
+                                <rect key="frame" x="168.5" y="242" width="77" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="7B8-TY-pro"/>
+                                </constraints>
+                                <state key="normal" title="BURBBERY"/>
+                                <connections>
+                                    <action selector="gotoSpecifyBrandProducts:" destination="9pv-A4-QxB" eventType="touchUpInside" id="tZd-M5-VHd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="15" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eb3-yI-Xpt">
+                                <rect key="frame" x="36" y="242" width="58" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="x0X-ij-ZOb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="GUCCUI"/>
                                 <connections>
-                                    <segue destination="VQt-eB-C8d" kind="push" id="WoM-tc-TdD"/>
+                                    <action selector="gotoSpecifyBrandProducts:" destination="9pv-A4-QxB" eventType="touchUpInside" id="5rH-ke-ltU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vS-KM-rG7">
+                                <rect key="frame" x="317.5" y="242" width="31" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="TNV-it-SEW"/>
+                                </constraints>
+                                <state key="normal" title="包袋"/>
+                                <connections>
+                                    <action selector="gotoSpecifyBrandProducts:" destination="9pv-A4-QxB" eventType="touchUpInside" id="V7v-M4-CM0"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="tFc-6G-2Ua" firstAttribute="top" secondItem="mlU-uB-PE4" secondAttribute="bottom" constant="8" id="48f-My-Iqh"/>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="tFc-6G-2Ua" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="7C6-gW-atL"/>
-                            <constraint firstItem="tFc-6G-2Ua" firstAttribute="top" secondItem="mlU-uB-PE4" secondAttribute="bottom" constant="8" symbolic="YES" id="Imo-rE-NfN"/>
-                            <constraint firstItem="mlU-uB-PE4" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="9" id="Ysf-6T-0da"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstItem="mlU-uB-PE4" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="evJ-jJ-DZA"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tFc-6G-2Ua" secondAttribute="trailing" id="iMD-nY-aFb"/>
-                            <constraint firstItem="tFc-6G-2Ua" firstAttribute="centerX" secondItem="mlU-uB-PE4" secondAttribute="centerX" id="lgs-xe-veE"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="tFc-6G-2Ua" secondAttribute="bottom" constant="582" id="oCl-bW-c7P"/>
+                            <constraint firstItem="zjs-CP-DUX" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="26" id="3du-5I-f7E"/>
+                            <constraint firstItem="NvM-gf-AhM" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="26" id="4an-ag-F7O"/>
+                            <constraint firstItem="1vS-KM-rG7" firstAttribute="top" secondItem="zjs-CP-DUX" secondAttribute="bottom" constant="8" id="Dw4-cL-p4D"/>
+                            <constraint firstItem="mlU-uB-PE4" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="Ibv-R4-WcP"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="zjs-CP-DUX" secondAttribute="trailing" constant="36" id="Jr1-a2-LFa"/>
+                            <constraint firstItem="hId-dP-Gzs" firstAttribute="top" secondItem="NvM-gf-AhM" secondAttribute="bottom" constant="8" id="LmX-Rj-5y5"/>
+                            <constraint firstItem="Eb3-yI-Xpt" firstAttribute="top" secondItem="mlU-uB-PE4" secondAttribute="bottom" constant="8" id="Mm1-Sb-sdV"/>
+                            <constraint firstItem="hId-dP-Gzs" firstAttribute="centerX" secondItem="NvM-gf-AhM" secondAttribute="centerX" id="btk-uK-G15"/>
+                            <constraint firstItem="1vS-KM-rG7" firstAttribute="centerX" secondItem="zjs-CP-DUX" secondAttribute="centerX" id="hHG-Fz-2rs"/>
+                            <constraint firstItem="NvM-gf-AhM" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="j7G-N7-0uO"/>
+                            <constraint firstItem="Eb3-yI-Xpt" firstAttribute="centerX" secondItem="mlU-uB-PE4" secondAttribute="centerX" id="kQH-Hs-pNK"/>
+                            <constraint firstItem="mlU-uB-PE4" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="26" id="mV5-m5-afq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <navigationItem key="navigationItem" id="9g7-GI-5Bb"/>
+                    <connections>
+                        <outlet property="bag" destination="zjs-CP-DUX" id="cbp-xa-ALQ"/>
+                        <outlet property="burberry" destination="NvM-gf-AhM" id="Nz8-rC-hLP"/>
+                        <outlet property="guccui" destination="mlU-uB-PE4" id="KBi-Fo-bzg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -364,68 +393,10 @@
             </objects>
             <point key="canvasLocation" x="3347.826086956522" y="-324.10714285714283"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="dTh-8K-W9o">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PO6-Qs-BJa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="4I1-vq-XXF" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qsH-aP-l87">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1146"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPX-Qs-6ze">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1146"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLS-mA-z1x">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5c-2u-gCh">
-                                                <rect key="frame" x="20" y="0.0" width="374" height="1055"/>
-                                                <mutableString key="text">前不久听说，业内最近出了《人类简史》这么一本“奇书”，作者是个名叫尤瓦尔·赫拉利的以色列年轻人。此书在2012年以希伯来文出版，很快就被翻译成近30种文字，不仅为全球学术界所瞩目，而且引起了公众的广泛兴趣。一部世界史新著竟能“火”成这样，实在是前所未闻。所以，当中信出版社请我为本书的中文版作序时，我也就出于好奇而暂时应承了下来：“先看看吧。”而这一看，我就立刻“着道”了——拿起了就放不下，几乎是一口气读完。吸引力主要来自作者才思的旷达敏捷，还有译者文笔的生动晓畅。而书中屡屡提及中国的相关史实，也能让人感到一种说不出的亲切，好像自己也融入其中，读来欲罢不能。后来看了策划编辑舒婷的特别说明，才知道该书中文版所参照的英文版，原来是作者特地为中国读者“量身定做”的。他给各国的版本也都下过同样的功夫——作者的功力之深，由此可见一斑。 事实上，赫拉利也的确是一位了不起的青年才俊。他1976年出生，2002年在牛津大学耶稣学院获得博士学位，曾专攻中世纪史和军事史，发表过《骑士时代的特殊战役（1100~1550）》（2007）、《最后经历：战场启示和现代战争文化的创生（1450~2000）》（2008）等专著，以及若干有关战争史的论文。在经历了这些微、中观的历史学专门训练之后，赫拉利便转向了一种极宏观的世界历史研究，而且还特别热衷于从物理学、化学、生物学、人类学、生态学、政治学、文化学和心理学等学科的角度，对作为一个物种的智人乃至整个人类社会的来龙去脉，做出全方位的考察和预测。老实说，如此大规模跨学科的史学研究计划是令人瞠目的，那似乎不是一个“专业历史学家”凭一己之力就能够成就的事情。然而，赫拉利还真的就单枪匹马地做了这么一件不可能的事。而且，事实证明，他做得不赖——我们面前的这部《人类简史》，作为他这一工作的初步成果，无疑是一个巨大的成功。而赫拉利本人自然也能因此而暴得大名：毕竟，能够像他这样从容游走于这么多学科之间的历史学家，是旷世罕见的。 当然，这件事还是有些令人生疑。且不论赫拉利在书中对人类学、生态学和生物工程学等“硬科学”的运用是否无可争议（那不是很多不明就里的外行读者一下子就能明判的），这位“旷世罕见的天才历史学家”一下子结合那么多“硬科学”，用不到500页的篇幅写出的从石器时代智人演化直到21世纪政治和技术革命的一整部“人类史”，在“专业历史学家”看来，恐怕已经很难说还是通常意义上的“历史”了。而且，由于缺乏对构成世界历史进程的许多重大事件或现象的系统叙述和解说，这本书恐怕连“宏观世界史”都算不上。可是，如果不是历史，它又能是什么呢？</mutableString>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstItem="k5c-2u-gCh" firstAttribute="top" secondItem="OLS-mA-z1x" secondAttribute="top" id="0Fn-GH-kAO"/>
-                                            <constraint firstAttribute="trailing" secondItem="k5c-2u-gCh" secondAttribute="trailing" constant="20" id="kXB-V2-r8k"/>
-                                            <constraint firstItem="k5c-2u-gCh" firstAttribute="leading" secondItem="OLS-mA-z1x" secondAttribute="leading" constant="20" id="pX0-wB-nSx"/>
-                                            <constraint firstAttribute="height" constant="1200" id="zB9-k3-K8X"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="OLS-mA-z1x" firstAttribute="width" secondItem="frI-Qd-3Dl" secondAttribute="width" id="548-6U-KN8"/>
-                                    <constraint firstItem="OLS-mA-z1x" firstAttribute="trailing" secondItem="k80-kP-sxy" secondAttribute="trailing" id="f4l-Hg-RBx"/>
-                                    <constraint firstItem="OLS-mA-z1x" firstAttribute="bottom" secondItem="k80-kP-sxy" secondAttribute="bottom" id="hCh-5R-RpS"/>
-                                    <constraint firstItem="OLS-mA-z1x" firstAttribute="top" secondItem="k80-kP-sxy" secondAttribute="top" id="iUk-dz-OdH"/>
-                                    <constraint firstItem="OLS-mA-z1x" firstAttribute="leading" secondItem="k80-kP-sxy" secondAttribute="leading" id="tWb-HK-tMt"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="k80-kP-sxy"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="frI-Qd-3Dl"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="YPX-Qs-6ze" secondAttribute="trailing" id="KW1-7b-wim"/>
-                            <constraint firstAttribute="bottom" secondItem="YPX-Qs-6ze" secondAttribute="bottom" id="V9z-af-QsD"/>
-                            <constraint firstItem="YPX-Qs-6ze" firstAttribute="top" secondItem="qsH-aP-l87" secondAttribute="top" id="qTt-SH-pOG"/>
-                            <constraint firstItem="YPX-Qs-6ze" firstAttribute="leading" secondItem="qsH-aP-l87" secondAttribute="leading" id="xF3-GU-uEl"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="cPR-Xr-HbW"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="ge9-Pk-Ohs"/>
-                    <size key="freeformSize" width="414" height="1200"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="1657.9710144927537" y="684.375"/>
-        </scene>
         <!--Good List Collection View Controller-->
         <scene sceneID="xNz-Q8-JCf">
             <objects>
-                <collectionViewController hidesBottomBarWhenPushed="YES" id="VQt-eB-C8d" customClass="GoodListCollectionViewController" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="goodlist" hidesBottomBarWhenPushed="YES" id="VQt-eB-C8d" customClass="GoodListCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="M4P-cr-nZo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -537,7 +508,7 @@
             </objects>
             <point key="canvasLocation" x="749" y="1172"/>
         </scene>
-        <!--Second-->
+        <!--Aticle-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
@@ -545,36 +516,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="106" y="426.5" width="202" height="43"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="99.5" y="477.5" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpK-U9-PfT">
-                                <rect key="frame" x="106" y="550" width="247" height="136"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="test"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPX-Qs-6ze">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLS-mA-z1x">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5c-2u-gCh">
+                                                <rect key="frame" x="20" y="0.0" width="374" height="1055"/>
+                                                <mutableString key="text">前不久听说，业内最近出了《人类简史》这么一本“奇书”，作者是个名叫尤瓦尔·赫拉利的以色列年轻人。此书在2012年以希伯来文出版，很快就被翻译成近30种文字，不仅为全球学术界所瞩目，而且引起了公众的广泛兴趣。一部世界史新著竟能“火”成这样，实在是前所未闻。所以，当中信出版社请我为本书的中文版作序时，我也就出于好奇而暂时应承了下来：“先看看吧。”而这一看，我就立刻“着道”了——拿起了就放不下，几乎是一口气读完。吸引力主要来自作者才思的旷达敏捷，还有译者文笔的生动晓畅。而书中屡屡提及中国的相关史实，也能让人感到一种说不出的亲切，好像自己也融入其中，读来欲罢不能。后来看了策划编辑舒婷的特别说明，才知道该书中文版所参照的英文版，原来是作者特地为中国读者“量身定做”的。他给各国的版本也都下过同样的功夫——作者的功力之深，由此可见一斑。 事实上，赫拉利也的确是一位了不起的青年才俊。他1976年出生，2002年在牛津大学耶稣学院获得博士学位，曾专攻中世纪史和军事史，发表过《骑士时代的特殊战役（1100~1550）》（2007）、《最后经历：战场启示和现代战争文化的创生（1450~2000）》（2008）等专著，以及若干有关战争史的论文。在经历了这些微、中观的历史学专门训练之后，赫拉利便转向了一种极宏观的世界历史研究，而且还特别热衷于从物理学、化学、生物学、人类学、生态学、政治学、文化学和心理学等学科的角度，对作为一个物种的智人乃至整个人类社会的来龙去脉，做出全方位的考察和预测。老实说，如此大规模跨学科的史学研究计划是令人瞠目的，那似乎不是一个“专业历史学家”凭一己之力就能够成就的事情。然而，赫拉利还真的就单枪匹马地做了这么一件不可能的事。而且，事实证明，他做得不赖——我们面前的这部《人类简史》，作为他这一工作的初步成果，无疑是一个巨大的成功。而赫拉利本人自然也能因此而暴得大名：毕竟，能够像他这样从容游走于这么多学科之间的历史学家，是旷世罕见的。 当然，这件事还是有些令人生疑。且不论赫拉利在书中对人类学、生态学和生物工程学等“硬科学”的运用是否无可争议（那不是很多不明就里的外行读者一下子就能明判的），这位“旷世罕见的天才历史学家”一下子结合那么多“硬科学”，用不到500页的篇幅写出的从石器时代智人演化直到21世纪政治和技术革命的一整部“人类史”，在“专业历史学家”看来，恐怕已经很难说还是通常意义上的“历史”了。而且，由于缺乏对构成世界历史进程的许多重大事件或现象的系统叙述和解说，这本书恐怕连“宏观世界史”都算不上。可是，如果不是历史，它又能是什么呢？</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="k5c-2u-gCh" firstAttribute="top" secondItem="OLS-mA-z1x" secondAttribute="top" id="0Fn-GH-kAO"/>
+                                            <constraint firstAttribute="trailing" secondItem="k5c-2u-gCh" secondAttribute="trailing" constant="20" id="kXB-V2-r8k"/>
+                                            <constraint firstItem="k5c-2u-gCh" firstAttribute="leading" secondItem="OLS-mA-z1x" secondAttribute="leading" constant="20" id="pX0-wB-nSx"/>
+                                            <constraint firstAttribute="height" constant="1200" id="zB9-k3-K8X"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="OLS-mA-z1x" firstAttribute="width" secondItem="frI-Qd-3Dl" secondAttribute="width" id="548-6U-KN8"/>
+                                    <constraint firstItem="OLS-mA-z1x" firstAttribute="trailing" secondItem="k80-kP-sxy" secondAttribute="trailing" id="f4l-Hg-RBx"/>
+                                    <constraint firstItem="OLS-mA-z1x" firstAttribute="bottom" secondItem="k80-kP-sxy" secondAttribute="bottom" id="hCh-5R-RpS"/>
+                                    <constraint firstItem="OLS-mA-z1x" firstAttribute="top" secondItem="k80-kP-sxy" secondAttribute="top" id="iUk-dz-OdH"/>
+                                    <constraint firstItem="OLS-mA-z1x" firstAttribute="leading" secondItem="k80-kP-sxy" secondAttribute="leading" id="tWb-HK-tMt"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="k80-kP-sxy"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="frI-Qd-3Dl"/>
                                 <connections>
-                                    <segue destination="4I1-vq-XXF" kind="show" id="kEr-k3-HMq"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="EAn-us-TCh"/>
                                 </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstAttribute="bottom" secondItem="YPX-Qs-6ze" secondAttribute="bottom" id="9CR-hl-2Lg"/>
+                            <constraint firstItem="YPX-Qs-6ze" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="U80-vB-bfC"/>
+                            <constraint firstItem="YPX-Qs-6ze" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="Unm-Ui-78m"/>
+                            <constraint firstItem="YPX-Qs-6ze" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="xdA-TS-I6T"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Aticle" image="second" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GoodListCollectionViewController : UICollectionViewController
 
+@property NSInteger currentBrand;
 @end
 
 NS_ASSUME_NONNULL_END
