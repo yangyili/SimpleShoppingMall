@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GoodList : NSObject
-@property NSArray *products;
+@property NSMutableArray *products;
 @end
 
 NS_ASSUME_NONNULL_END

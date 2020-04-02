@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface GoodViewModel : NSObject
 -(instancetype) initWithHttpClient: (id<HttpClientProtocol>) httpClient viewController:(id<GoodListViewControllerProtocol>) viewController;
 
-- (void) fetchGoodBy: (NSInteger)brand;
+- (void) fetchGoodBy: (NSInteger)brand withPage:(NSInteger)page;
 - (void) fetchGoodDetailBy: (NSInteger)goodId;
 
 - (NSInteger) goodCount;

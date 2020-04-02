@@ -15,10 +15,13 @@
 @interface GoodListCollectionViewController ()<GoodListViewControllerProtocol, UICollectionViewDelegateFlowLayout>
 
 @property(nonatomic, strong) GoodViewModel *viewModel;
+@property NSInteger currentPage;
+@property NSInteger currentBrand;
 
 @end
 
 @implementation GoodListCollectionViewController
+NSInteger const MAX_PAGE=5;
 
 static NSString * const reuseIdentifier = @"goodintro";
 
@@ -38,12 +41,14 @@ static NSString * const reuseIdentifier = @"goodintro";
 //    [self.collectionView registerClass:[GoodCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
-    NSInteger brand = 15;
-    [self.viewModel fetchGoodBy: brand];
+    self.currentBrand = 15;
+    self.currentPage = 1;
+    [self.viewModel fetchGoodBy: _currentBrand withPage: _currentPage];
 }
 
 
 - (void) reloadData {
+    _currentPage++;
     [self.collectionView reloadData];
 }
 
@@ -120,4 +125,10 @@ static NSString * const reuseIdentifier = @"goodintro";
 }
 */
 
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    NSLog(@"collection scroll view to end");
+    if (_currentPage < MAX_PAGE) {
+        [self.viewModel fetchGoodBy:_currentBrand withPage:_currentPage];
+    }
+}
 @end

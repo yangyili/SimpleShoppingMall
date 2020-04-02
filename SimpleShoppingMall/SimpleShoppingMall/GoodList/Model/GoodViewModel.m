@@ -25,11 +25,18 @@
     return self;
 }
 
-- (void) fetchGoodBy: (NSInteger)brandID{
+- (void) fetchGoodBy: (NSInteger)brandID withPage:(NSInteger) page{
     NSInteger defaultBrand = 15;
-    NSDictionary *filterParams = @{@"filter_action": @"brand_product", @"filter_data": [NSString stringWithFormat:@"%ld", brandID ? brandID : defaultBrand]};
+    NSInteger defaultPage = 1;
+    NSDictionary *filterParams = @{@"filter_action": @"brand_product", @"filter_data": [NSString stringWithFormat:@"%ld", brandID ? brandID : defaultBrand], @"page": [NSString stringWithFormat:@"%ld", page ? page : defaultPage]};
     [self.httpClient getDataWithPath:@"/api/v2/products.json" parameters:filterParams success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
-        self.list = [GoodList yy_modelWithDictionary:responseObject];
+        NSLog(@"get products success: %ld", page);
+        if (self.list && self.list.products) {
+            GoodList *appendList = [GoodList yy_modelWithDictionary:responseObject];
+            [self.list.products addObjectsFromArray:appendList.products];
+        } else {
+            self.list = [GoodList yy_modelWithDictionary:responseObject];
+        }
         [self.viewController reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"get products error: %@", error);
