@@ -26,8 +26,8 @@
 }
 
 - (void)fetchTop250 {
-    
-    [self.httpClient getDataWithPath:@"/v2/movie/top250" parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
+    NSDictionary *params = @{@"apikey": @"0df993c66c0c636e29ecbb5344252a4a"};
+    [self.httpClient getDataWithPath:@"/v2/movie/top250" parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
         self.list = [MovieList yy_modelWithDictionary:responseObject];
         [self.viewController reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

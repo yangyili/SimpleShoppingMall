@@ -18,19 +18,24 @@
 
 -(instancetype)initWithHostKey: (NSString *)hostKey{
     self = [super init];
-    NSURL *url = [HttpClient DoubanHost];
+    NSURL *url;
     if ([hostKey isEqualToString:@"mall"]) {
         url = [HttpClient MallHost];
+    } else {
+        url = [HttpClient DoubanHost];
     }
     self.sessionManger = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
     return self;
 }
 
 + (NSURL * _Nonnull)DoubanHost {
-    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist"];
+    /*
+     NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist"];
     NSMutableDictionary *infoDict = [NSMutableDictionary dictionaryWithContentsOfFile:bundlePath];
     NSString *host = [infoDict objectForKey:@"DOUBAN_HOST"];
     return [NSURL URLWithString:[NSString stringWithFormat:@"https://%@", host]];
+     */
+    return  [NSURL URLWithString:@"https://api.douban.com"];
 }
 
 + (NSURL * _Nonnull)MallHost{

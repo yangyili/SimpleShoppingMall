@@ -20,15 +20,16 @@
 
 @implementation MovieViewController
 
-- (void) awakeFromNib {
-    [super awakeFromNib];
-    HttpClient *client = [[HttpClient alloc] initWithHostKey: @""];
-    self.viewModel = [[MovieViewModel alloc] initWithHttpClient:client viewController:self];
-}
+//- (void) awakeFromNib {
+//    [super awakeFromNib];
+//    HttpClient *client = [[HttpClient alloc] initWithHostKey: @""];
+//    self.viewModel = [[MovieViewModel alloc] initWithHttpClient:client viewController:self];
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    HttpClient *client = [[HttpClient alloc] initWithHostKey: @""];
+    self.viewModel = [[MovieViewModel alloc] initWithHttpClient:client viewController:self];
     [self.tableView registerNib:[UINib nibWithNibName:@"MovieTableViewCell" bundle:nil] forCellReuseIdentifier:@"MovieTableViewCell"];
     
     [self.viewModel fetchTop250];
