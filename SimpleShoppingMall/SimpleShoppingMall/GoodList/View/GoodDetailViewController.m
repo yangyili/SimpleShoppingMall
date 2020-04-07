@@ -41,13 +41,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self calculateCarouselImageLeadingSpace];
     [self setGoodDetail];
     [self initIBoutletStyle];
+    [_carouselScrollView setContentOffset:CGPointMake(_carouselScrollView.bounds.size.width, 0)
+    animated:NO];
     [self setCarouselImages];
     [self startCarouselTimer];
-    [self.carouselScrollView setContentOffset: CGPointMake(self.carouselScrollView.bounds.size.width, 0)
- animated:YES];
 }
 
 - (void) initIBoutletStyle{
@@ -85,12 +84,6 @@
     }
 }
 
-- (void)calculateCarouselImageLeadingSpace {
-    NSInteger imageWidth = self.carouselCenterImage.bounds.size.width;
-    NSInteger scrollviewWidth = self.carouselScrollView.bounds.size.width;
-    _carouselImageLeadingSpaceCarouselScrollView = (scrollviewWidth - imageWidth)/2;
-}
-
 - (void)automaticScroll {
     CGPoint currentPoint = self.carouselScrollView.contentOffset;
     currentPoint.x += self.carouselScrollView.bounds.size.width;
@@ -100,7 +93,7 @@
 
 - (void)startCarouselTimer {
     NSTimer *newTimer =
-    [NSTimer scheduledTimerWithTimeInterval:3.0
+    [NSTimer scheduledTimerWithTimeInterval:5.0
                                      target:self
                                      selector:@selector(automaticScroll)
                                      userInfo:nil
@@ -158,18 +151,18 @@
 }
 
 - (void)currentImageIndexAdd {
-    if (self.currentImageIndex == _carouselImageCount - 1) {
-        self.currentImageIndex = 0;
+    if (_currentImageIndex == _carouselImageCount - 1) {
+        _currentImageIndex = 0;
     } else {
-        self.currentImageIndex +=  1;
+        _currentImageIndex +=  1;
     }
 }
 
 - (void)currentImageIndexMinus {
-    if (self.currentImageIndex == 0) {
-        self.currentImageIndex = _carouselImageCount - 1;
+    if (_currentImageIndex == 0) {
+        _currentImageIndex = _carouselImageCount - 1;
     } else {
-        self.currentImageIndex -= 1;
+        _currentImageIndex -= 1;
     }
 }
 
@@ -180,10 +173,10 @@
     } else if (scrollViewOffset.x == 0) {
         [self currentImageIndexMinus];
     }
+    _carouselPageControl.currentPage = _currentImageIndex;
     [_carouselCenterImage sd_setImageWithURL:[NSURL URLWithString:_carouselImages[_currentImageIndex]] placeholderImage:[UIImage imageNamed: @"gooddefault.png"]];
     [_carouselLeftImage sd_setImageWithURL:[NSURL URLWithString:_carouselImages[_leftImageIndex]] placeholderImage:[UIImage imageNamed: @"gooddefault.png"]];
     [_carouselRightImage sd_setImageWithURL:[NSURL URLWithString:_carouselImages[_rightImageIndex]] placeholderImage:[UIImage imageNamed: @"gooddefault.png"]];
-  _carouselPageControl.currentPage = self.currentImageIndex;
 }
 
 - (void)setCarouselImages {
@@ -193,21 +186,8 @@
         [_carouselImages addObject:[_good.product_images objectAtIndex:i][@"image_url"]];
     }
     _carouselPageControl.numberOfPages = _carouselImageCount;
+    _currentImageIndex = 0;
     [self reloadImageViews];
-}
-
-/*
-  #program scrollview delegate
- */
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
-                  willDecelerate:(BOOL)decelerate {
-
-  [self startCarouselTimer];
-}
-
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-
-  [self endCarouselTimer];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -229,12 +209,12 @@
       setContentOffset:CGPointMake(_carouselScrollView.bounds.size.width, 0)
               animated:NO];
 }
+
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
 
   [self reloadImageViews];
 
-  [_carouselScrollView
-      setContentOffset:CGPointMake(_carouselScrollView.bounds.size.width, 0)
+  [_carouselScrollView setContentOffset:CGPointMake(_carouselScrollView.bounds.size.width, 0)
               animated:NO];
 }
 @end
